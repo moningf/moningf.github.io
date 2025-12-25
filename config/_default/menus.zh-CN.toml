@@ -1,0 +1,28 @@
+[[main]]
+  name = "首页"
+  pageRef = "/"
+  weight = 10
+
+[[main]]
+  name = "全部"
+  pageRef = "all"
+  weight = 20
+
+[[main]]
+  name = "关于"
+  pageRef = "info"
+  weight = 30
+
+[[main]]
+  name = "分类"
+  pageRef = "tags"
+  weight = 40
+
+[[main]]
+  name = "友链"
+  weight = "50"
+
+# [[main]]
+#   name = ""
+#   parent = "友链"
+#   url = ""

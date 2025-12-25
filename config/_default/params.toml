@@ -1,0 +1,154 @@
+# 主题样式
+colorScheme = "nori"
+defaultAppearance = "dark"
+autoSwitchAppearance = true
+
+# 无障碍 和 启用搜索
+enableA11y = false
+enableSearch = true
+
+# 代码复制 和 breadcrumbs
+enableCodeCopy = true
+enableStructuredBreadcrumbs = true
+
+# 邮箱回复
+replyByEmail = false
+
+# 展示最近文章应该显示的内容
+# mainSections = ["/post"]
+
+# 显示文章和列表的 阅读量 和 点赞量
+showViews = true
+showLikes = true
+
+# 搜索引擎爬虫如何处理你的网站
+# robots
+
+# 禁止图片缩放 禁止图片调整大小 禁止md图片调整
+disableImageZoom = false
+disableImageOptimization = false
+disableImageOptimizationMD = false
+
+# 背景图像 和 FeaturedIMage
+backgroundImageWidth = 1200 #宽度（以像素为单位）用于缩放
+defaultBackgroundImage = "img/wallpaper.jpg" # 设置默认背景图，(background 和 hero)
+defaultFeaturedImage = "img/wallpaper.jpg"
+
+# 文章特色图片和文章卡片中外链图片。这些图片不会被 Hugo 处理。
+hotlinkFeatureImage = false
+
+# 高亮(菜单,目录)
+highlightCurrentMenuArea  = true
+smartTOC = true
+smartTOCHideUnfocusedChildren = true
+
+# 防止浏览器缓存问题
+fingerprintAlgorithm = "sha512"
+
+
+# 标题
+disableTextInHeader = false #禁用文本类型的标题，对基于 logo 的标题很有用。
+
+# 页头
+header.layout = "fixed"
+
+# 页脚
+[footer]
+showMenu = true
+showCopyright = true
+showThemeAttribution = true
+showAppearanceSwitcher = true
+showScrollToTop = true
+
+# 主页
+[homepage]
+layout = "background"
+showRecent = true
+showRecentItems = 8
+showMoreLink = true
+showMoreLinkDest = "/posts"
+cardView = true
+cardViewScreenWidth = false
+layoutBackgroundBlur  = true
+disableHeroImageFilter = false
+
+# 文章页
+[article]
+showDate = true
+showDateOnlyInArticle = false
+showDateUpdated = false
+showAuthor = false
+
+showHero = true
+heroStyle = "background"
+layoutBackgroundBlur = true
+layoutBackgroundHeaderSpace = true
+showBreadcrumbs = true
+showDraftLabel= false
+showEdit = false
+seriesOpened = false
+showHeadingAnchors = true
+showPagination = false
+showReadingTime = true
+showTableOfContents = true
+showRecentItems = false
+showTaxonomies = true
+showAuthorsBadges = false
+showWordCount = false
+showComments = false
+showZenMode = false
+# 集成firebase
+showViews = true
+showLikes = false
+
+# 列表
+[list]
+showHero = true
+heroStyle = "background"
+showBreadcrumbs = false
+layoutBackgroundBlur = true
+layoutBackgroundHeaderSpace = true
+showTableOfContents = false
+showSummary = false
+showCards = true
+orderByWeight = true
+groupByYear = true
+cardView = false
+cardViewScreenWidth = false
+constrainItemsWidth = false
+list.showTableOfContents = false
+# 集成firebase
+showViews = false
+showLikes = false
+
+# 分类法
+[taxonomy]
+showTermCount = true
+showHero = true
+heroStyle = "background"
+showBreadcrumbs = false
+cardView = true
+# 集成firebase
+showViews = false
+showLikes = false
+
+[term]
+showHero = true
+heroStyle = "background"
+showBreadcrumbs = false
+showTableOfContents = false
+groupByYear = true
+cardView = false
+cardViewScreenWidth = false
+# 集成firebase
+showViews = false
+showLikes = false
+
+[firebase]
+  apiKey = "AIzaSyAfQ7Nw_tYaem-iQi1pQV-4KNSUh9mM03Y"
+  authDomain = "myblog-1c02d.firebaseapp.com"
+  projectId = "myblog-1c02d"
+  storageBucket = "myblog-1c02d.firebasestorage.app"
+  messagingSenderId = "596470405166"
+  appId = "1:596470405166:web:9f67c9e40a640f68ebe7bf"
+  measurementId = "G-XL08045V6M"

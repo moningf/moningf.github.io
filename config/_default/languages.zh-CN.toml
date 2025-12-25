@@ -1,0 +1,30 @@
+disabled = false
+languageCode = "zh-CN"
+languageName = "简体中文"
+title = "Moningf的博客"
+weight = 1
+
+[params]
+  displayName = "简体中文"
+  isoCode = "zh-CN"
+  rtl = false
+  dateFormat = "2006 Jan 02"
+  # logo = "img/logo.png"
+  # secondaryLogo = "img/secondary-logo.png"
+  # description = "My awesome website"
+  # copyright = "Copy, _right?_ :thinking_face:"
+
+[params.author]
+name = "Moningf"
+email = "themoningf@gmail.com"
+image = "img/author.jpg"
+imageQuality = 96
+headline = "You Only Live Once"
+bio = "You Only Live Once"
+
+links = [
+{ github = "https://github.com/moningf" },
+{ email = "mailto:themoningf@gmail.com" },
+# { bilibili = "https://space.bilibili.com/3546699316332613?spm_id_from=333.1007.0.0"},
+{ zhihu = "https://www.zhihu.com/people/47-5-5-84"},
+]
