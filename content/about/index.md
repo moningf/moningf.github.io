@@ -5,6 +5,7 @@ draft : false
 title : '关于我'
 showViews : false
 showDate : false
+showReadingTime : false
 # tags: [""]
 # categories: ["all"]
 ---
