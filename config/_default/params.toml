@@ -1,7 +1,7 @@
 # 主题样式
 colorScheme = "nori"
 defaultAppearance = "dark"
-autoSwitchAppearance = true
+autoSwitchAppearance = false
 
 # 无障碍 和 启用搜索
 enableA11y = false
@@ -95,7 +95,7 @@ showRecentItems = false
 showTaxonomies = true
 showAuthorsBadges = false
 showWordCount = false
-showComments = false
+showComments = true
 showZenMode = false
 # 集成firebase
 showViews = true
