@@ -1,10 +1,11 @@
 ---
 authors: ["Moningf"]
 date : '{{ .Date }}'
-draft : true
 title : '{{ replace .File.ContentBaseName "-" " " | title }}'
+featureImage : "img/feature1.png"
 showReadingTime : true
 showComments : false
-# tags: [""]
-# categories: ["all"]
+# tags: [" "]
+# categories: [" "]
+draft : true
 ---

@@ -1,5 +1,5 @@
 # 主题样式
-colorScheme = "nori"
+colorScheme = "blowfish"
 defaultAppearance = "dark"
 autoSwitchAppearance = false
 
@@ -15,11 +15,11 @@ enableStructuredBreadcrumbs = true
 replyByEmail = false
 
 # 展示最近文章应该显示的内容
-# mainSections = ["/post"]
+# mainSections = ["/"]
 
 # 显示文章和列表的 阅读量 和 点赞量
 showViews = true
-showLikes = true
+showLikes = false
 
 # 搜索引擎爬虫如何处理你的网站
 # robots
@@ -32,15 +32,15 @@ disableImageOptimizationMD = false
 # 背景图像 和 FeaturedIMage
 backgroundImageWidth = 1200 #宽度（以像素为单位）用于缩放
 defaultBackgroundImage = "img/wallpaper.jpg" # 设置默认背景图，(background 和 hero)
-defaultFeaturedImage = "img/wallpaper.jpg"
+defaultFeaturedImage = "img/feature1.png"
 
 # 文章特色图片和文章卡片中外链图片。这些图片不会被 Hugo 处理。
-hotlinkFeatureImage = false
+hotlinkFeatureImage = true
 
 # 高亮(菜单,目录)
 highlightCurrentMenuArea  = true
 smartTOC = true
-smartTOCHideUnfocusedChildren = true
+smartTOCHideUnfocusedChildren = false
 
 # 防止浏览器缓存问题
 fingerprintAlgorithm = "sha512"
@@ -64,9 +64,9 @@ showScrollToTop = true
 [homepage]
 layout = "background"
 showRecent = true
-showRecentItems = 8
+showRecentItems = 12
 showMoreLink = true
-showMoreLinkDest = "/posts"
+showMoreLinkDest = "all"
 cardView = true
 cardViewScreenWidth = false
 layoutBackgroundBlur  = true
@@ -76,7 +76,7 @@ disableHeroImageFilter = false
 [article]
 showDate = true
 showDateOnlyInArticle = false
-showDateUpdated = false
+showDateUpdated = true
 showAuthor = false
 
 showHero = true
@@ -84,9 +84,9 @@ heroStyle = "background"
 layoutBackgroundBlur = true
 layoutBackgroundHeaderSpace = true
 showBreadcrumbs = true
-showDraftLabel= false
+showDraftLabel= true
 showEdit = false
-seriesOpened = false
+seriesOpened = true
 showHeadingAnchors = true
 showPagination = false
 showReadingTime = true
@@ -96,7 +96,7 @@ showTaxonomies = true
 showAuthorsBadges = false
 showWordCount = false
 showComments = true
-showZenMode = false
+showZenMode = true
 # 集成firebase
 showViews = true
 showLikes = false
@@ -110,22 +110,25 @@ layoutBackgroundBlur = true
 layoutBackgroundHeaderSpace = true
 showTableOfContents = false
 showSummary = false
-showCards = true
+showCards = false
 orderByWeight = true
-groupByYear = true
-cardView = false
+groupByYear = false
+cardView = true
 cardViewScreenWidth = false
-constrainItemsWidth = false
-list.showTableOfContents = false
+constrainItemsWidth = true
 # 集成firebase
 showViews = false
 showLikes = false
+
+[sitemap]
+excludedKinds = []
 
 # 分类法
 [taxonomy]
 showTermCount = true
 showHero = true
 heroStyle = "background"
+#显示主图的样式，有效选项有： basic 、 big 、 background 、 thumbAndBackground 。仅当 taxonomy.showHero = true 时有效。
 showBreadcrumbs = false
 cardView = true
 # 集成firebase
@@ -136,9 +139,9 @@ showLikes = false
 showHero = true
 heroStyle = "background"
 showBreadcrumbs = false
-showTableOfContents = false
+showTableOfContents = true
 groupByYear = true
-cardView = false
+cardView = true
 cardViewScreenWidth = false
 # 集成firebase
 showViews = false

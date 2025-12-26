@@ -1,6 +1,6 @@
 # https://blowfish.page/docs/getting-started/
 theme = "blowfish"
-baseURL = "https://moningf.top/"
+baseURL = "/"
 defaultContentLanguage = "zh-CN"
 
 # pluralizeListTitles = "true"

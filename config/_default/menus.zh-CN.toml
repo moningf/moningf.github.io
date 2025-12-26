@@ -9,18 +9,18 @@
   weight = 20
 
 [[main]]
-  name = "关于"
-  pageRef = "about"
+  name = "归类"
+  pageRef = "tags"
   weight = 30
 
 [[main]]
-  name = "分类"
-  pageRef = "tags"
+  name = "关于"
+  pageRef = "about"
   weight = 40
 
-[[main]]
-  name = "友链"
-  weight = "50"
+# [[main]]
+#   name = "友链"
+#   weight = "50"
 
 # [[main]]
 #   name = ""
