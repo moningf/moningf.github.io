@@ -78,7 +78,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 # --- 文章页面配置 (Article) ---
 [article]
   showDate = true # 显示发布日期
-  showViews = false # 显示阅读量 (需配置 Firebase)
+  showViews = true # 显示阅读量 (需配置 Firebase)
   showLikes = false # 显示点赞数 (需配置 Firebase)
   showDateOnlyInArticle = false # 仅在文章内显示日期 (不在列表页显示)
   showDateUpdated = false # 显示更新日期
