@@ -5,7 +5,6 @@ title : 'Cookie、Session 与 JWT —— 发展与用途'
 # featureImage : "img/feature1.png"
 showWordCount : true
 showReadingTime : true
-showComments : false
 tags: ["笔记"]
 # categories: [" "]
 draft : false

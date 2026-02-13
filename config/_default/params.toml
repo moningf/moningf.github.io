@@ -105,7 +105,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showCategoryOnly = false # 仅显示“分类” (category)
   showAuthorsBadges = false # 显示作者徽章 (用于多作者站点)
   showWordCount = true # 显示字数统计
-  # showComments = false # 显示评论区
+  showComments = true # 显示评论区
   showZenMode = false # 启用“禅模式” (全屏阅读)
   externalLinkForceNewTab = true # 强制外链在新标签页打开 (默认为 true)
   

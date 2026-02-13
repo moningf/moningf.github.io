@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+
+<div id="waline" class="mt-10"></div>
+
+<script type="module">
+  import {init} from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+  init({
+    el: '#waline',
+    serverURL: 'https://comment.moningf.top', // 【这里务必改成你的域名】
+    dark: 'html.dark',  // 自动适配 Blowfish 的暗色模式
+    pageview: true,     // 开启阅读量统计
+    comment: true,      // 开启评论数统计
+    emoji: [
+      '//unpkg.com/@waline/emojis@1.1.0/weibo',
+      '//unpkg.com/@waline/emojis@1.1.0/bilibili',
+    ],
+  });
+</script>
+
+<style>
+  /* 适配 Blowfish 风格的 CSS 变量微调 */
+  :root.dark {
+    --waline-theme-color: #14b8a6;
+    /* 匹配 Blowfish 的青色 */
+    --waline-bgcolor: #1e1e2e;
+    --waline-bgcolor-light: #27273a;
+    --waline-info-bgcolor: #27273a;
+  }
+
+  .waline-container {
+    @apply mt-10 border-t border-dashed border-neutral-200 dark:border-neutral-700 pt-10;
+  }
+</style>

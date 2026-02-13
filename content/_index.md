@@ -1,6 +1,7 @@
 +++
 date = '2025-12-25T09:03:43+08:00'
 draft = false
+showComments = false
 title = ''
 [build]
   list = "never"
