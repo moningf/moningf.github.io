@@ -46,7 +46,7 @@ summaryLength = 0 # 自动摘要的长度。0 表示使用第一句话，或者�
 ########## SEO与搜索引擎优化 ############
 #########################################
 enableRobotsTXT = true # 自动生成 robots.txt 文件
-# googleAnalytics = "G-XXXXXXXXX" # Google Analytics 统计 ID
+googleAnalytics = "G-XL08045V6M " # Google Analytics 统计 ID
 
 [sitemap] # 站点地图配置
   changefreq = 'daily' # 更新频率

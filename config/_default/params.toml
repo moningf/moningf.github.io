@@ -164,6 +164,13 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 # --- Firebase (Views & Likes) ---
 [firebase]
+  apiKey = "AIzaSyAfQ7Nw_tYaem-iQi1pQV-4KNSUh9mM03Y"
+  authDomain = "myblog-1c02d.firebaseapp.com"
+  projectId = "myblog-1c02d"
+  storageBucket = "myblog-1c02d.firebasestorage.app"
+  messagingSenderId = "596470405166"
+  appId = "1:596470405166:web:9f67c9e40a640f68ebe7bf"
+  measurementId = "G-XL08045V6M"
 
 # --- Analytics (Fathom) ---
 [fathomAnalytics] 
