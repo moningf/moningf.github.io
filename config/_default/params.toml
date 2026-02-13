@@ -78,7 +78,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 # --- 文章页面配置 (Article) ---
 [article]
   showDate = true # 显示发布日期
-  showViews = true # 显示阅读量 (需配置 Firebase)
+  showViews = false # 显示阅读量 (需配置 Firebase)
   showLikes = false # 显示点赞数 (需配置 Firebase)
   showDateOnlyInArticle = false # 仅在文章内显示日期 (不在列表页显示)
   showDateUpdated = false # 显示更新日期
@@ -164,13 +164,6 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 # --- Firebase (Views & Likes) ---
 [firebase]
-  apiKey = "AIzaSyAfQ7Nw_tYaem-iQi1pQV-4KNSUh9mM03Y"
-  authDomain = "myblog-1c02d.firebaseapp.com"
-  projectId = "myblog-1c02d"
-  storageBucket = "myblog-1c02d.firebasestorage.app"
-  messagingSenderId = "596470405166"
-  appId = "1:596470405166:web:9f67c9e40a640f68ebe7bf"
-  measurementId = "G-XL08045V6M"
 
 # --- Analytics (Fathom) ---
 [fathomAnalytics] 
@@ -179,11 +172,11 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 # --- Analytics (Umami) ---
 [umamiAnalytics] 
-  # websiteid = "ABC12345"
+  websiteid = "9c08986b-04d4-4d9c-b83b-e803705ec6fe"
   # domain = "llama.yoursite.com"
   # dataDomains = "yoursite.com,yoursite2.com"
   # scriptName = ""
-  # enableTrackEvent = true
+  enableTrackEvent = true
 
 # --- Analytics (Seline) ---
 [selineAnalytics] 
