@@ -1,0 +1,33 @@
+# -- Main Menu --
+# 顶部导航菜单配置
+
+[[main]]
+  name = "首页" # 菜单名称
+  pageRef = "/" # 链接地址 (pageRef 支持 Hugo 页面引用解析)
+  weight = 10 # 排序权重 (越小越靠左)
+
+[[main]]
+  name = "全部"
+  pageRef = "all" # 对应 content/all/_index.md 或类似页面
+  weight = 20
+
+[[main]]
+  name = "归类"
+  pageRef = "tags" # 对应 tags 分类页
+  weight = 30
+
+[[main]]
+  name = "关于"
+  pageRef = "about" # 对应 content/about.md
+  weight = 40
+
+# 示例：下拉菜单
+# [[main]]
+#   name = "友链"
+#   weight = "50"
+#   identifier = "friends" # 父菜单标识符
+
+# [[main]]
+#   name = "某某博客"
+#   parent = "friends" # 指向父菜单标识符
+#   url = "https://example.com"

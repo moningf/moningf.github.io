@@ -1,0 +1,209 @@
+# 文档: https://blowfish.page/docs/configuration/#theme-parameters
+
+#########################################
+######### 站点全部基本信息 (Global) #####
+#########################################
+
+# --- 外观 (Appearance) ---
+colorScheme = "blowfish" # 主题配色方案: blowfish (默认), avocado, fire, ocean, forest, 等
+defaultAppearance = "dark" # 默认外观: light (浅色) 或 dark (深色)
+autoSwitchAppearance = false # 是否根据用户系统设置自动切换深色/浅色模式
+
+# --- 功能开关 (Features) ---
+enableSearch = true # 是否启用全站搜索
+enableCodeCopy = true # 是否在代码块显示“复制”按钮
+enableA11y = false # 是否启用辅助功能切换按钮
+enableStructuredBreadcrumbs = true # 是否启用结构化数据的面包屑导航 (SEO)
+enableStyledScrollbar = true # 是否启用自定义滚动条样式 (默认为 true)
+replyByEmail = false # 是否在文章后启用“通过邮件回复”链接
+highlightCurrentMenuArea = true # 高亮当前所在的菜单项
+smartTOC = true # 智能目录 (滚动时高亮当前章节)
+smartTOCHideUnfocusedChildren = false # 智能目录中隐藏未聚焦的子章节
+
+# --- 图片与资源 (Images & Assets) ---
+disableImageOptimization = false # 禁用所有图片优化 (缩放、压缩)
+disableImageOptimizationMD = false # 仅禁用 Markdown 中图片的优化
+disableTextInHeader = false # 禁用页头文字 (用于仅显示 Logo 的情况)
+# disableImageZoom = false # 禁用全站图片缩放功能
+# backgroundImageWidth = 1200 # 背景图片缩放宽度
+defaultBackgroundImage = "img/wallpaper.webp" # 默认背景图
+defaultFeaturedImage = "img/wallpaper.webp" # 默认特色图 (文章缩略图)
+# defaultSocialImage = "/android-chrome-512x512.png" # 默认社交分享图 (Open Graph / Twitter)
+hotlinkFeatureImage = false # 是否允许直接使用外链作为特色图 (不进行处理)
+# imagePosition = "50% 50%" # 默认图片对齐方式 (CSS object-position)
+fingerprintAlgorithm = "sha512" # 资源指纹算法 (sha512, sha384, sha256) 防止缓存问题
+
+# --- SEO & Meta ---
+# robots = "" # 自定义 robots meta 标签
+
+# --- 内容配置 (Content) ---
+# mainSections = ["section1", "section2"] # 指定在“最近文章”中显示哪些版块的文章
+# showViews = false # 全局显示阅读量 (需配置 Firebase)
+# showLikes = false # 全局显示点赞数 (需配置 Firebase)
+
+# --- Git 服务集成 (Git Integration) ---
+giteaDefaultServer = "https://git.fsfe.org" # Forgejo/Gitea 短代码的默认服务器地址
+forgejoDefaultServer = "https://v11.next.forgejo.org"
+
+
+#########################################
+######### 区域配置 (Sections) ###########
+#########################################
+
+# --- 页头配置 (Header) ---
+[header]
+  layout = "fixed" # 页头布局: basic (基础), fixed (固定), fixed-fill (固定填充), fixed-gradient, fixed-fill-blur
+
+# --- 页脚配置 (Footer) ---
+[footer]
+  showMenu = true # 显示页脚菜单
+  showCopyright = true # 显示版权信息
+  showThemeAttribution = true # 显示主题归属 (Powered by Blowfish)
+  showAppearanceSwitcher = true # 显示外观切换器 (深色/浅色开关)
+  showScrollToTop = true # 显示“回到顶部”按钮
+
+# --- 首页配置 (Homepage) ---
+[homepage]
+  layout = "background" # 首页布局: page, profile (个人简介), hero (大图), card (卡片), background, custom
+  # homepageImage = "img/wallpaper.png" # 首页 Hero 或 Card 布局使用的图片
+  showRecent = true # 是否在首页显示最近文章
+  showRecentItems = 5 # 显示最近文章的数量
+  showMoreLink = true # 是否显示“查看更多”链接
+  showMoreLinkDest = "/posts/" # “查看更多”链接的目标地址
+  cardView = true # 最近文章是否以卡片形式展示
+  cardViewScreenWidth = false # 卡片视图是否占满全宽
+  layoutBackgroundBlur = true # 背景布局下，背景图是否随滚动模糊
+  disableHeroImageFilter = false # 禁用 Hero 图片的滤镜
+
+# --- 文章页面配置 (Article) ---
+[article]
+  showDate = true # 显示发布日期
+  showViews = false # 显示阅读量 (需配置 Firebase)
+  showLikes = false # 显示点赞数 (需配置 Firebase)
+  showDateOnlyInArticle = false # 仅在文章内显示日期 (不在列表页显示)
+  showDateUpdated = false # 显示更新日期
+  showAuthor = false # 在文章底部显示作者框
+  # showAuthorBottom = false # 作者框显示在底部而非顶部
+  showHero = true # 是否将特色图显示为 Hero 图片
+  heroStyle = "background" # Hero 样式: basic, big, background, thumbAndBackground
+  layoutBackgroundBlur = true # 背景 Hero 样式下，背景图随滚动模糊
+  layoutBackgroundHeaderSpace = true # 背景 Hero 样式下，保留页头空间
+  showBreadcrumbs = false # 显示面包屑导航
+  showDraftLabel = true # 显示“草稿”标签
+  showEdit = false # 显示“编辑此页”链接
+  # editURL = "https://github.com/username/repo/" # 编辑链接的基础 URL
+  editAppendPath = true # 编辑链接自动追加文件路径
+  seriesOpened = false # 系列文章模块默认展开
+  showHeadingAnchors = true # 显示标题锚点 (#)
+  showPagination = true # 显示 上一篇/下一篇 链接
+  invertPagination = false # 反转 上一篇/下一篇 的方向
+  showReadingTime = true # 显示阅读时间
+  showTableOfContents = true # 显示文章目录 (TOC)
+  showRelatedContent = true # 显示相关文章
+  relatedContentLimit = 3 # 相关文章数量限制
+  showTaxonomies = true # 显示文章的所有分类信息 (标签、分类等)
+  showCategoryOnly = false # 仅显示“分类” (category)
+  showAuthorsBadges = false # 显示作者徽章 (用于多作者站点)
+  showWordCount = true # 显示字数统计
+  # showComments = false # 显示评论区
+  showZenMode = false # 启用“禅模式” (全屏阅读)
+  externalLinkForceNewTab = true # 强制外链在新标签页打开 (默认为 true)
+  
+  # 分享链接配置
+  # sharingLinks = [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram", "line"]
+
+# --- 列表页面配置 (List) ---
+[list]
+  showHero = true # 显示 Hero 图片
+  heroStyle = "background" # Hero 样式
+  layoutBackgroundBlur = true # 背景模糊
+  layoutBackgroundHeaderSpace = true # 保留页头空间
+  showBreadcrumbs = false # 显示面包屑
+  showSummary = false # 显示文章摘要
+  showViews = false # 显示阅读量
+  showLikes = false # 显示点赞数
+  showTableOfContents = false # 显示目录
+  showCards = false # 以卡片形式显示文章列表
+  orderByWeight = false # 按权重排序
+  groupByYear = true # 按年份分组显示
+  cardView = false # (同 showCards)
+  cardViewScreenWidth = false # 卡片全宽
+  constrainItemsWidth = false # 限制列表项宽度 (增加可读性)
+
+# --- Sitemap 配置 ---
+[sitemap]
+  excludedKinds = ["taxonomy", "term"] # 在 Sitemap 中排除的页面类型
+
+# --- 分类 (Taxonomy) 页面配置 (例如 /tags/) ---
+[taxonomy]
+  showTermCount = true # 显示每个分类下的文章数量
+  showHero = true
+  heroStyle = "background"
+  showBreadcrumbs = false
+  showViews = false
+  showLikes = false
+  showTableOfContents = false
+  cardView = false
+
+# --- 术语 (Term) 页面配置 (例如 /tags/hugo/) ---
+[term]
+  showHero = true
+  heroStyle = "background"
+  showBreadcrumbs = false
+  showViews = false
+  showLikes = false
+  showTableOfContents = true
+  groupByYear = false # 按年份分组
+  cardView = false
+  cardViewScreenWidth = false
+
+
+#########################################
+######### 第三方服务集成 (Integrations) #
+#########################################
+
+# --- Firebase (Views & Likes) ---
+[firebase]
+
+# --- Analytics (Fathom) ---
+[fathomAnalytics] 
+  # site = "ABC12345"
+  # domain = "llama.yoursite.com"
+
+# --- Analytics (Umami) ---
+[umamiAnalytics] 
+  # websiteid = "ABC12345"
+  # domain = "llama.yoursite.com"
+  # dataDomains = "yoursite.com,yoursite2.com"
+  # scriptName = ""
+  # enableTrackEvent = true
+
+# --- Analytics (Seline) ---
+[selineAnalytics] 
+  # token = "XXXXXX"
+  # enableTrackEvent = true
+
+# --- Buy Me a Coffee ---
+[buymeacoffee] 
+  # identifier = ""
+  # globalWidget = true
+  # globalWidgetMessage = "Hello"
+  # globalWidgetColor = "#FFDD00"
+  # globalWidgetPosition = "right"
+
+# --- 站长验证 (Verifications) ---
+[verification] 
+  # google = ""
+  # bing = ""
+  # pinterest = ""
+  # yandex = ""
+  # fediverse = ""
+
+# --- RSSNext / Follow ---
+[rssnext] 
+  # feedId = ""
+  # userId = ""
+
+# --- 广告 (Advertisement) ---
+[advertisement] 
+  # adsense = "" # Google Adsense ID

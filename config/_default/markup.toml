@@ -1,0 +1,27 @@
+# -- Markup --
+# 配置将标记（Markdown）转换为 HTML 的渲染方式
+
+[goldmark]
+  [goldmark.parser]
+    wrapStandAloneImageWithinParagraph = false # 是否将独立图片包裹在 p 标签中
+
+    [goldmark.parser.attribute]
+      block = true # 允许块级元素属性
+
+  [goldmark.renderer]
+    unsafe = true # 允许在 Markdown 中使用原始 HTML (非常重要，Blowfish 的许多短代码需要此选项)
+    hardWraps = true # 将换行符渲染为 <br>
+
+  [goldmark.extensions]
+    [goldmark.extensions.passthrough] # 数学公式渲染配置
+      enable = true
+      [goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)']]
+
+[highlight] # 代码高亮配置
+  noClasses = false # false 表示使用 CSS 类生成高亮，true 表示使用内联样式
+
+[tableOfContents] # 目录生成配置
+  startLevel = -1 # 目录开始的标题级别 (h2)
+  endLevel = 9 # 目录结束的标题级别 (h4)

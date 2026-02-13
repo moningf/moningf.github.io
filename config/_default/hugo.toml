@@ -1,0 +1,89 @@
+# hugo相关参数 https://gohugo.io/configuration/
+
+#########################################
+############# 基础配置 ##################
+#########################################
+baseURL = "https://moningf.top/" # 网站的根 URL
+theme = "blowfish" # 指定使用的主题
+defaultContentLanguage = "zh-CN" # 默认内容语言
+hasCJKLanguage = true # 开启 CJK（中日韩）语言支持，优化字数统计等
+
+#########################################
+############# 构建与生成 ################
+#########################################
+buildDrafts = false # 是否构建草稿文章 (draft: true)
+buildFuture = false # 是否构建发布日期在未来的文章
+enableEmoji = true # 开启 Emoji 支持 (例如 :smile:)
+
+outputs.home=["HTML", "RSS", "JSON"]
+# [outputs]
+#   home = ["HTML", "RSS", "JSON"] # 首页输出格式，Blowfish 需要 JSON 用于搜索
+
+#########################################
+############# 内容展示和分页 ############
+#########################################
+summaryLength = 0 # 自动摘要的长度。0 表示使用第一句话，或者在 front matter 中未指定 summary 时不显示摘要。
+
+[pagination]
+  pagerSize = 100 # 每页显示的文章数量
+
+#########################################
+############# 分类体系 ##################
+#########################################
+[taxonomies] # 内容分类体系配置
+  tag = "tags" # 标签
+  category = "categories" # 分类
+  series = "series" # 系列
+  # author = "authors" # 作者
+
+#########################################
+############# 图片处理 ##################
+#########################################
+[imaging]
+  anchor = 'Center' # 图片处理时的锚点位置
+
+#########################################
+########## SEO与搜索引擎优化 ############
+#########################################
+enableRobotsTXT = true # 自动生成 robots.txt 文件
+# googleAnalytics = "G-XXXXXXXXX" # Google Analytics 统计 ID
+
+[sitemap] # 站点地图配置
+  changefreq = 'daily' # 更新频率
+  filename = 'sitemap.xml' # 文件名
+  priority = 0.5 # 优先级
+
+
+
+#########################################
+############# 相关文章 ##################
+#########################################
+[related] # 相关文章推荐配置
+  threshold = 0 # 关联度阈值，超过此值才显示
+  toLower = false # 是否将标签转换为小写进行匹配
+
+    [[related.indices]]
+        name = "tags" # 基于标签匹配
+        weight = 100 # 权重 100
+
+    [[related.indices]]
+        name = "categories" # 基于分类匹配
+        weight = 100
+
+    [[related.indices]]
+        name = "series" # 基于系列匹配
+        weight = 50
+
+    [[related.indices]]
+        name = "authors" # 基于作者匹配
+        weight = 20
+
+    [[related.indices]]
+        name = "date" # 基于日期匹配（越近越相关）
+        weight = 10
+
+    [[related.indices]]
+      applyFilter = false
+      name = 'fragmentrefs'
+      type = 'fragments'
+      weight = 10

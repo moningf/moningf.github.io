@@ -1,0 +1,38 @@
+/* 常规体 */
+@font-face {
+  font-family: 'Maple Mono';
+  src: url('/fonts/MapleMono-Regular.ttf.woff2') format('woff2');
+  /* 确保文件名和你下载的一致 */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 粗体 */
+@font-face {
+  font-family: 'Maple Mono';
+  src: url('/fonts/MapleMono-Bold.ttf.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 斜体 (专门给注释用) */
+@font-face {
+  font-family: 'Maple Mono';
+  src: url('/fonts/MapleMono-Italic.ttf.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* --- 2. 应用字体 (Blowfish 专用变量) --- */
+:root {
+  /* 只修改等宽字体变量，用于代码块 */
+  --font-family-mono: 'Maple Mono', monospace;
+}
+
+/* 额外保险：强制这几个标签使用新字体 */
+html {
+  font-family: 'Maple Mono', monospace !important;
+}
