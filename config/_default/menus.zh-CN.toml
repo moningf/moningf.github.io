@@ -31,3 +31,19 @@
 #   name = "某某博客"
 #   parent = "friends" # 指向父菜单标识符
 #   url = "https://example.com"
+
+[[footer]]
+name = "分类"
+pageRef = "categories"
+weight = 10
+
+[[footer]]
+name = "标签"
+pageRef = "tags"
+weight = 20
+
+[[footer]]
+pre = "rss"
+name = "RSS"
+url = "https://moningf.top/index.xml"
+weight = 30

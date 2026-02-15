@@ -1,9 +1,10 @@
 ---
 date : '2025-12-26T10:12:46+08:00'
-authors: ["Moningf"]
 title : 'Niri'
 tags: ["Arch","Niri","Linux"]
 # categories: ["all"]
+# series: ["Linux"]
+# series_order: 1
 draft : false
 ---
 

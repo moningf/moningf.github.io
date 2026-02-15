@@ -4,7 +4,7 @@
 disabled = false # 是否禁用此语言
 languageCode = "zh-CN" # Hugo 语言代码
 languageName = "简体中文" # 语言名称（显示在语言切换器中）
-title = "Moningf的博客" # 网站标题
+title = "Moningf's Blog" # 网站标题
 weight = 1 # 语言排序权重（越小越靠前）
 
 [params]

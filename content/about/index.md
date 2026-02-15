@@ -8,6 +8,7 @@ showReadingTime: false
 showComments : false
 build:
   list: never
+  render: "always"
 ---
 
 
