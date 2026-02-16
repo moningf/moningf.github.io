@@ -2,6 +2,8 @@
 date = '2026-02-16T19:14:07+08:00'
 draft = false
 title = 'B站OBS直播方法'
+featureImage = 'img/bilibili.jpg'
+tags=["bilibili"]
 # tags=[]
 # categories= ["all"]
 # series=[""]
