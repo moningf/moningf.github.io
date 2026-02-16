@@ -6,6 +6,7 @@ showDate : false
 showWordCount : false
 showReadingTime: false
 showComments : false
+showTableOfContents : false
 build:
   list: never
   render: "always"
