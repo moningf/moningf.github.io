@@ -7,7 +7,7 @@ tags=["bilibili"]
 # categories= ["all"]
 # series=[""]
 # series_order=1
-# description=''
+description='本文主要内容：直接注销换绑，然后在注销冷静期内给账号找回'
 # summary=''
 +++
 {{< lead >}}
