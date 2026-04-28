@@ -41,18 +41,18 @@ jobs:
         run: hugo --minify
 
       # --- 🌍 第一站：推送到服务器 ---
-      - name: Deploy to Server (Rsync)
-        run: |
-          # 1. 配置 SSH
-          mkdir -p ~/.ssh/
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
-          
-          # 2. 同步文件
-          # 注意：这里同步的是 public/ 目录
-          rsync -avz --delete public/ ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}:/var/www/blog/
-
+      # - name: Deploy to Server (Rsync)
+      #   run: |
+      #     # 1. 配置 SSH
+      #     mkdir -p ~/.ssh/
+      #     echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+      #     chmod 600 ~/.ssh/id_ed25519
+      #     ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+      #
+      #     # 2. 同步文件
+      #     # 注意：这里同步的是 public/ 目录
+      #     rsync -avz --delete public/ ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}:/var/www/blog/
+      #
       # --- 📦 准备 GitHub Pages 的包裹 ---
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
