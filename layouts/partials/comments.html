@@ -1,104 +1,69 @@
-<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
-
-<div id="waline"></div>
-
-<script type="module">
-  import {init} from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
-
-  init({
-    el: '#waline',
-    serverURL: 'https://comment.moningf.top',
-    dark: 'html.dark',  // 适配暗色模式
-    pageview: true,     // 开启阅读量
-    comment: true,      // 开启评论数
-
-    // 只保留昵称和邮箱
-    meta: ['nick', 'mail'],
-
-    // 必填项 (如果你想让邮箱选填，就把 'mail' 从这里删掉)
-    requiredMeta: ['nick'],
-
-    // 表情包 (B站 + 贴吧 + 微博)
-    emoji: [
-      '//unpkg.com/@waline/emojis@1.1.0/bilibili',
-      '//unpkg.com/@waline/emojis@1.1.0/tieba',
-      '//unpkg.com/@waline/emojis@1.1.0/weibo',
-    ],
-
-    locale: {
-      placeholder: '欢迎评论！',
-      admin: '博主',
-      sofa: '快来抢沙发~',
-    },
-  });
-</script>
+<!-- CSS -->
+<link href="{{ $.Site.Params.artalk.server }}/dist/Artalk.css" rel="stylesheet">
 
 <style>
-  :root {
-    /* 基础配色 */
-    --waline-theme-color: #14b8a6;
-    --waline-active-color: #0d9488;
-    --waline-text-color: #444;
-    --waline-bgcolor: #fff;
-    --waline-bgcolor-light: #f8fafc;
-    --waline-border-color: #e2e8f0;
-    --waline-font-size: 1rem;
+  /* 亮色模式 - 适配 Blowfish */
+  html .artalk, html .atk-layer-wrap {
+    --at-color-main: rgb(59, 130, 246);
+    --at-color-font: rgb(15, 23, 42);
+    --at-color-deep: rgb(30, 41, 59);
+    --at-color-sub: rgb(71, 85, 105);
+    --at-color-meta: rgb(100, 116, 139);
+    --at-color-grey: rgb(148, 163, 184);
+    --at-color-border: rgb(203, 213, 225);
+    --at-color-bg: rgb(255, 255, 255);
+    --at-color-bg-transl: rgba(255, 255, 255, 0.95);
+    --at-color-bg-grey: rgb(241, 245, 249);
+    --at-color-bg-light: rgb(239, 246, 255);
   }
 
-  html.dark {
-    --waline-theme-color: #14b8a6;
-    --waline-active-color: #2dd4bf;
-    --waline-text-color: #e5e7eb;
-    --waline-bgcolor: #1e1e2e;
-    --waline-bgcolor-light: #252538;
-    --waline-border-color: #3f3f5a;
-    --waline-info-bgcolor: #252538;
-    --waline-info-color: #9ca3af;
-  }
-
-  #waline {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px dashed var(--waline-border-color);
-  }
-
-  /* 隐藏版权 */
-  .wl-power {
-    display: none;
-  }
-
-  /* 修复圆角 */
-  .wl-btn,
-  .wl-input {
-    border-radius: 0.5rem;
-  }
-
-  .wl-editor {
-    /* 1. 强制盒模型：把内边距算在宽度里，防止撑破 */
-    box-sizing: border-box !important;
-
-    /* 2. 锁死宽度，绝不溢出 */
-    width: 100% !important;
-    max-width: 100% !important;
-
-    /* 3. 只允许垂直拉伸（上下拉），禁止左右拉 */
-    resize: vertical !important;
-
-    /* 4. 确保右下角手柄不会因为 margin 跑出去 */
-    margin: 0 !important;
-  }
-
-  /* 即使点击聚焦，也保持这个规矩 */
-  .wl-editor:focus,
-  .wl-input:focus {
-    box-shadow: none !important;
-    border-color: var(--waline-theme-color) !important;
-    background: var(--waline-bgcolor-light) !important;
-  }
-
-  /* 修复表情包尺寸 */
-  .wl-content .vemoji {
-    max-height: 2.2em;
-    vertical-align: middle;
+  /* 暗色模式 - 适配 Blowfish */
+  html.dark .artalk, html.dark .atk-layer-wrap {
+    --at-color-main: rgb(96, 165, 250);
+    --at-color-font: rgb(226, 232, 240);
+    --at-color-deep: rgb(248, 250, 252);
+    --at-color-sub: rgb(203, 213, 225);
+    --at-color-meta: rgb(148, 163, 184);
+    --at-color-grey: rgb(100, 116, 139);
+    --at-color-border: rgb(51, 65, 85);
+    --at-color-bg: rgb(15, 23, 42);
+    --at-color-bg-transl: rgba(15, 23, 42, 0.95);
+    --at-color-bg-grey: rgb(30, 41, 59);
+    --at-color-bg-light: rgb(30, 41, 59);
   }
 </style>
+
+<!-- JS -->
+<script src="{{ $.Site.Params.artalk.server }}/dist/Artalk.js"></script>
+
+<!-- Artalk -->
+<div id="Comments"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var isDark = document.documentElement.classList.contains('dark');
+
+    var artalk = Artalk.init({
+      el:        '#Comments',
+      pageKey:   '{{ .Permalink }}',
+      pageTitle: '{{ .Title }}',
+      server:    '{{ $.Site.Params.artalk.server }}',
+      site:      '{{ $.Site.Params.artalk.site }}',
+      darkMode:  isDark,
+    });
+
+    // 监听 Blowfish 主题切换
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          var nowDark = document.documentElement.classList.contains('dark');
+          artalk.setDarkMode(nowDark);
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+  });
+</script>

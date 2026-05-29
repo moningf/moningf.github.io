@@ -53,23 +53,18 @@
 {{ $meta.Add "partials" (slice (partial "meta/likes.html" .)) }}
 {{ end }}
 
-{{/* --- 开始插入 Waline 阅读量 --- */}}
-{{ if and (ne $scope "single") (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true))
-}}
-{{/* 如果你想在列表页也显示，可以在这里处理 */}}
-{{ end }}
-
+{{/* --- Artalk 阅读量 (PV) --- */}}
 {{ if eq $scope "single" }}
-{{ $walineHTML := printf `<span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="mr-1"
+{{ $pvHTML := `<span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="mr-1"
     width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
     stroke-linejoin="round">
     <circle cx="12" cy="12" r="2"></circle>
     <path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7"></path>
-  </svg><span class="waline-pageview-count" data-path="%s">...</span><span class="ml-1">次阅读</span></span>` .RelPermalink
+  </svg><span class="artalk-pv-count">...</span><span class="ml-1">次阅读</span></span>`
 }}
-{{ $meta.Add "partials" (slice ($walineHTML | safeHTML)) }}
+{{ $meta.Add "partials" (slice ($pvHTML | safeHTML)) }}
 {{ end }}
-{{/* --- 结束插入 --- */}}
+{{/* --- 结束 --- */}}
 
 {{ if and (eq $scope "single") (not .Params.externalURL) (.Params.showLikes | default (.Site.Params.article.showLikes |
 default false)) }}

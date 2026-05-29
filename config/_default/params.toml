@@ -205,5 +205,10 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   # userId = ""
 
 # --- 广告 (Advertisement) ---
-[advertisement] 
+[advertisement]
   # adsense = "" # Google Adsense ID
+
+# --- Artalk 评论 ---
+[artalk]
+  server = "http://82.156.123.31:8080"
+  site = "Moningf 的博客"

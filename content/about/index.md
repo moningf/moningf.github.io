@@ -5,7 +5,7 @@ author : "Moningf"
 showDate : false
 showWordCount : false
 showReadingTime: false
-showComments : false
+showComments : true
 showTableOfContents : false
 build:
   list: never
