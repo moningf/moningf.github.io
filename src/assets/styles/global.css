@@ -281,3 +281,8 @@ span.katex-display {
     border-radius: 999px;
   }
 }
+
+/* Hide sponsorship link below article copyright */
+div:has(> a[href='/projects#sponsorship']) {
+  display: none;
+}

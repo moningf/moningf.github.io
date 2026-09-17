@@ -163,4 +163,19 @@ const { class: className } = Astro.props
   :global(.dark) #waline :global(.wl-reaction img) {
     filter: invert(75%);
   }
+  /* Fix Waline RSS subscription links */
+  #waline :global(.wl-rss > a) {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    max-width: none;
+    width: max-content;
+    white-space: nowrap;
+  }
+
+  #waline :global(.wl-rss > a span) {
+    white-space: nowrap;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
 </style>
