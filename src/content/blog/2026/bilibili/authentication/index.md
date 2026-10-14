@@ -4,7 +4,6 @@ publishDate: '2026-02-16T21:09:45+08:00'
 description: '记录通过账号注销冷静期处理 B 站实名信息换绑的个人经历与注意事项。'
 tags:
   - Bilibili
-language: '中文'
 draft: false
 ---
 

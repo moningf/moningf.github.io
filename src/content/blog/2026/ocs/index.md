@@ -7,7 +7,6 @@ tags:
   - Linux
   - OCS
   - 浏览器脚本
-language: '中文'
 draft: false
 ---
 

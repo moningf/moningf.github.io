@@ -7,7 +7,6 @@ tags:
   - OpenCode
   - tmux
   - Vibe Coding
-language: '中文'
 draft: false
 ---
 

@@ -7,7 +7,6 @@ tags:
   - Mihomo
   - Tailscale
   - Clash Verge Rev
-language: '中文'
 draft: false
 ---
 

@@ -7,7 +7,6 @@ tags:
   - Arch
   - Niri
   - Linux
-language: '中文'
 draft: false
 ---
 

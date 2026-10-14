@@ -6,7 +6,6 @@ heroImage: { src: './featured0.png', alt: 'Neovim 编辑器界面' }
 tags:
   - Neovim
   - Linux
-language: '中文'
 draft: false
 ---
 

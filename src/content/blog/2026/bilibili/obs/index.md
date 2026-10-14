@@ -5,7 +5,6 @@ description: '记录通过浏览器用户脚本在 B 站网页端使用 OBS 开�
 tags:
   - Bilibili
   - OBS
-language: '中文'
 draft: false
 ---
 

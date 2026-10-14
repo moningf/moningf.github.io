@@ -6,7 +6,6 @@ heroImage: { src: './feature.webp', alt: 'Hugo 博客' }
 tags:
   - Blog
   - Hugo
-language: '中文'
 draft: false
 ---
 

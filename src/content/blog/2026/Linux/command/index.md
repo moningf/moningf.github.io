@@ -6,7 +6,6 @@ heroImage: { src: './feature.webp', alt: 'Linux 命令行' }
 tags:
   - Linux
   - 命令行
-language: '中文'
 draft: false
 ---
 
